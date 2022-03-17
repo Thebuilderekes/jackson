@@ -158,11 +158,12 @@ footer {
 
 footer p {
   font-size: 14px;
+  font-family: "opensans-regular", sans-serif;
 }
 
 footer p a {
-  text-decoration: none;
-  color: rgb(99, 5, 99);
+  text-decoration: underline;
+  color: #ffffff;
 }
 
 /*==============================================================*/

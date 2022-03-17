@@ -58,7 +58,7 @@ color: #ffffff;
 
 
 i {
-   color: #31035c;
+   color: #ffffff;
 }
 
 p {
@@ -439,10 +439,11 @@ footer {
 footer p {
    color: black;
 font-size: 14px ;
+font-family: "opensans-regular", sans-serif;
 
 }
 
 footer p a {
-   text-decoration: none;
+   text-decoration: underline;
    color: #ffffff;
 }
