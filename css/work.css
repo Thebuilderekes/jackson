@@ -21,6 +21,16 @@ html {
    overflow-x: hidden;
 }
 
+
+a {
+   text-decoration: none;
+}
+
+
+h1 {
+   font-family: "Cinzel", serif;
+}
+
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
 /* ------------------------------------------------------------------ */
@@ -31,7 +41,7 @@ html {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   padding: 10px 20px;
+   padding:  10px;
    font-size: 18px;
    position: fixed;
    z-index: 20;
@@ -39,9 +49,7 @@ html {
 }
 
 
-a {
-   text-decoration: none;
-}
+
 
 
 .active {
@@ -52,7 +60,7 @@ color: #ffffff;
 .top-bar .logo {
    text-decoration: none ;
    font-family: 'Cinzel', serif;
-   font-size: 20px;
+   font-size: 18px;
    color: #000000;
 }
 
@@ -69,11 +77,35 @@ p {
    color: #000000;
    font-weight: 600;
    font-size: 18px;
+   font-family: "opensans-regular", sans-serif;
    padding: 0 10px;
    transition: 0.6s all;
  
 }
 
+/* MEDIA QUERIES
+  -------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 480px) {
+
+   .top-bar nav a {
+      font-size: 14px;
+  }
+
+}
+
+
+@media screen and (max-width: 340px) {
+   .top-bar nav a {
+     font-size: 12px;
+   }
+ 
+ 
+   .top-bar  .logo {
+     font-size: 12px;
+   }
+ 
+ }
 
 
 
@@ -157,11 +189,11 @@ nav a:hover {
 
 #portfolio {
    background: #ffffff;
-   padding-top: 90px;
+   padding-top:  90px;
    padding-bottom: 60px;
 }
 #portfolio h1 {
-   font: 24px 'opensans-semibold', sans-serif;
+   font: 24px "Cinzel", serif; 
    text-transform: uppercase;
    letter-spacing: 1px;
    text-align: center;

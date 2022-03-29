@@ -53,9 +53,7 @@ header {
   z-index: 20;
 }
 
-header > a {
-  color: red;
-}
+
 
 header p {
   font-size: var(--medium-font-size);
@@ -83,7 +81,7 @@ nav a {
   text-decoration: none;
   color: #000000;
   font-family: "opensans-regular", sans-serif;
-  font-size: 18px;
+  font-size: var(--small-font-size);
   font-weight: 600;
   padding: 0 10px;
   transition: 0.6s all;
@@ -94,7 +92,7 @@ nav a:hover {
 }
 
 main {
-  margin-top: 100px;
+  margin-top: 150px;
   margin-left: 50px;
   margin-right: 50px;
 }
@@ -207,9 +205,6 @@ footer p a {
     row-gap: 50px;
   }
 
-  .about-section-text {
-    text-align: center;
-  }
 
   .about-section p {
     font-size: var(--normal-font-size);
@@ -224,7 +219,7 @@ footer p a {
 
   .about-section p {
     font-size: 14px;
-    width: 70%;
+  
   }
 }
 
@@ -246,6 +241,19 @@ footer p a {
 
   .about-section p {
     font-size: 14px;
-    width: 70%;
+  
   }
+}
+
+
+@media screen and (max-width: 320px) {
+  nav a {
+    font-size: 12px;
+  }
+
+
+  .logo {
+    font-size: 12px;
+  }
+
 }
