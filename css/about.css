@@ -110,6 +110,7 @@ h1 {
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
+  padding-bottom: 50px;
 }
 
 .about-section img {
@@ -122,26 +123,20 @@ h1 {
   line-height: 1.5;
   font-size: 20px;
   font-family: "opensans-regular", sans-serif;
-  color: rgb(31, 30, 30);
+  color: rgba(48, 47, 47, 0.678);
 }
 
-section {
+
+
+.social .social-links {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 20px;
-}
-
-section h2 {
-  font-family: "Della Respira", serif;
-}
-
-.social-links {
+  padding-bottom: 50px;
   padding-top: 20px;
 }
 
-.social-links a {
+.social .social-links a {
   padding: 0 10px;
 }
 
