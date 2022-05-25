@@ -242,7 +242,7 @@ width: 100%;
 
 @media screen and (max-width: 400px) {
   nav a {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .logo {
