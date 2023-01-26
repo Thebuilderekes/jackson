@@ -9,11 +9,12 @@
 }
 
 :root {
-  --extarlarge-font-size: 50px;
-  --large-font-size: 36px;
-  --medium-font-size: 24px;
-  --small-font-size: 18px;
-  --normal-font-size: 16px;
+  --extralarge-fs: 50px;
+  --large-fs: 36px;
+  --medium-fs: 24px;
+  --small-fs: 18px;
+  --very-small-fs: 14px;
+  --normal-fs: 16px;
 }
 
 /*====================================*/
@@ -47,60 +48,132 @@ body {
 
 a {
   text-decoration: none;
+  font-family: 'opensans-light';
+}
+
+button {
+  background-color: transparent;
+  border: none;
 }
 
 /*====================================*/
-/*========HEADER STYLES=================*/
+/*========Navigation STYLES=================*/
 /*===================================*/
+/*  {
+  position: relative;
+} */
 
-header {
-  background-color: #ba96db;
+
+.nav-container {
   width: 100%;
+  background: blueviolet;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px;
   position: fixed;
-  top: 0;
-  z-index: 20;
+  z-index: 10;
 }
 
 
 
-header p {
-  font-size: var(--medium-font-size);
-  font-family: "Cinzel", serif;
-  padding: 0;
-  margin: 0;
+
+header .nav-container .desktop-menu button {
+  display: none;
 }
+
+
 
 .active {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.container {
+  padding: 20px 30px;
+}
+
+
+.desktop-menu {
+  display: flex;
+  align-items: center;
+}
+
+.desktop-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.desktop-menu ul li {
+  padding: 0 20px;
+}
+
+.desktop-menu ul li a {
+  font-family: 'opensans-light';
+  font-weight: 700;
   color: #ffffff;
 }
 
-.logo {
-  text-decoration: none;
-  font-family: "Cinzel", serif;
-  font-size: var(--medium-font-size);
+
+.mobile__menu--container {
+  background: blueviolet;
+  display: none;
+  width: 40vw;
+  height: 100vh;
+  z-index: 10;
+  position: fixed;
+  right: 0;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+@media screen and (min-width:900px) {
+  .mobile__menu--container {
+    display: none;
+
+  }
+
+}
+
+
+.mobile__menu--container .mobile__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-evenly;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
+@media screen and (max-width:500px) {
+
+  .mobile__menu .mobile__menu--container {
+    width: 60vw;
+  }
+}
+
+.mobile__menu--container .mobile__menu ul {
+  list-style: none;
+}
+
+.mobile__menu--container .mobile__menu ul li {
+  padding: 20px 0;
+
+}
+
+.mobile__menu--container .mobile__menu ul li a {
+  font-size: var(--normal-fs);
+  font-weight: 900;
   color: #000000;
-}
+  padding: 20px 0;
 
-i {
-  color: #31035c;
-}
-
-nav a {
-  text-decoration: none;
-  color: #000000;
-  font-family: "opensans-regular", sans-serif;
-  font-size: var(--small-font-size);
-  font-weight: 600;
-  padding: 0 10px;
-  transition: 0.6s all;
-}
-
-nav a:hover {
-  color: blueviolet;
 }
 
 
@@ -116,8 +189,8 @@ main {
 }
 
 h1 {
-  font-size: var(--large-font-size);
-  font-family: "Cinzel", serif;
+  font-size: var(--large-fs);
+  font-family: 'opensans-semibold';
   color: #000000;
   margin-top: 50px;
   margin: auto;
@@ -126,20 +199,28 @@ h1 {
 .about-section {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+  /* align-items: center; */
   padding-bottom: 50px;
 }
 
-.about-section img {
+.about-section picture {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.about-section picture img {
   border-radius: 15px;
   border-right: 5px solid blueviolet;
 }
 
 .about-section p {
-  width: 70%;
+  width: 60%;
   line-height: 1.5;
-  font-size: 20px;
+  font-size: var(--small-fs);
   font-family: "opensans-regular", sans-serif;
   color: rgba(48, 47, 47, 0.678);
 }
@@ -168,7 +249,7 @@ footer {
 }
 
 footer p {
-  font-size: 14px;
+  font-size: var(--very-small-fs);
   font-family: "opensans-regular", sans-serif;
 }
 
@@ -181,12 +262,7 @@ footer p a {
 /*======================== MEDIA QUERIES ===================*/
 /*=============================================================*/
 
-@media screen and (max-width: 1920px) {  
-
-.about-section img {
-
-width: 100%;
-}
+@media screen and (max-width: 1920px) {
 
 
   .about-section p {
@@ -196,35 +272,17 @@ width: 100%;
 }
 
 
-
-
 @media screen and (max-width: 1200px) {
-  header {
-    background-color: #ba96db;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    position: fixed;
-    top: 0;
-    z-index: 20;
-  }
 
-  nav a {
-    font-size: 16px;
-  }
 
   .about-section p {
-    font-size: var(--normal-font-size);
+    font-size: var(--normal-fs);
     width: 70%;
   }
 }
 
 @media screen and (max-width: 800px) {
-  nav a {
-    font-size: 14px;
-  }
+
 
   h1 {
     text-align: center;
@@ -237,53 +295,37 @@ width: 100%;
 
 
   .about-section p {
-    font-size: var(--normal-font-size);
+    font-size: var(--normal-fs);
     width: 100%;
   }
 }
 
 @media screen and (max-width: 500px) {
-  nav a {
-    font-size: 14px;
+
+  header .desktop-menu ul {
+    display: none;
+  }
+
+  header .nav-container .desktop-menu button {
+    display: block;
   }
 
   .about-section p {
-    font-size: 14px;
-  
+    font-size: var(--very-small-fs);
+
   }
 }
 
-@media screen and (max-width: 400px) {
-  nav a {
-    font-size: 12px;
-  }
+@media screen and (max-width: 480px) {
 
-  .logo {
-    text-decoration: none;
-    font-family: "Cinzel", serif;
-    font-size: var(--small-font-size);
-    color: #000000;
-  }
+
 
   .about-section {
     flex-direction: column;
   }
 
   .about-section p {
-    font-size: 14px;
-  
+    font-size: var(--very-small-fs);
+
   }
-}
-
-
-@media screen and (max-width: 320px) {
-  nav a {
-    font-size: 12px;
-  }
-
-
-  .logo {
-    font-size: 12px;
-  }
-
 }

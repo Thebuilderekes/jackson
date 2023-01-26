@@ -2,6 +2,15 @@
 /* a. General Styles
 /* ------------------------------------------------------------------ */
 
+:root {
+   --extralarge-fs: 50px;
+   --large-fs: 36px;
+   --medium-fs: 24px;
+   --small-fs: 18px;
+   --very-small-fs: 14px;
+   --normal-fs: 16px;
+}
+
 body {
    background: #0f0f0f;
 }
@@ -24,88 +33,19 @@ h1 {
 /* b. Header Styles
 /* ------------------------------------------------------------------ */
 
-.top-bar {
-   background-color: #ba96db;
-   ;
-   width: 100%;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 10px;
-   font-size: 18px;
-   position: fixed;
-   z-index: 20;
-   top: 0;
-}
-
-
-
 
 
 .active {
    color: #ffffff;
 }
 
-
-.top-bar .logo {
-   text-decoration: none;
-   font-family: 'Cinzel', serif;
-   font-size: 18px;
-   color: #000000;
-}
-
-
 i {
    color: #ffffff;
 }
 
-.top-bar nav a {
-   text-decoration: none;
-   color: #000000;
-   font-weight: 600;
-   font-size: 18px;
-   font-family: "opensans-regular", sans-serif;
-   padding: 0 10px;
-   transition: 0.6s all;
-
+header .container-2 {
+   padding: 10px 10px 0 10px;
 }
-
-/* MEDIA QUERIES
-  -------------------------------------------------------------------------- */
-
-@media only screen and (max-width: 480px) {
-
-   .top-bar nav a {
-      font-size: 12px;
-   }
-
-}
-
-
-@media screen and (max-width: 340px) {
-   .top-bar nav a {
-      font-size: 12px;
-   }
-
-
-   .top-bar .logo {
-      font-size: 12px;
-   }
-
-}
-
-
-
-nav a:hover {
-   color: blueviolet;
-}
-
-
-.top-bar nav .active {
-   color: #ffffff;
-}
-
-
 
 
 
@@ -247,12 +187,12 @@ nav a:hover {
 
 #portfolio {
    background: #ffffff;
-   padding-top: 90px;
-   padding-bottom: 60px;
+   padding-top: 10rem;
+   padding-bottom: 4rem;
 }
 
 #portfolio h1 {
-   font: 24px "Cinzel", serif;
+   font: var(--medium-fs) "Cinzel", serif;
    text-transform: uppercase;
    letter-spacing: 1px;
    text-align: center;
@@ -263,14 +203,25 @@ nav a:hover {
 #portfolio h5 {
    text-transform: uppercase;
    text-align: center;
-   font-size: 18px;
+   font-size: var(--small-fs);
    font-family: "Cinzel", serif;
    font-weight: 600;
 }
 
-#portfolio h5 a {
+#portfolio nav {
+   text-align: center;
+
+}
+
+#portfolio nav a {
+   text-transform: uppercase;
    text-decoration: underline;
    color: blueviolet;
+   font-weight: 900;
+}
+
+#portfolio h5 a:hover {
+   color: #000000;
 }
 
 
@@ -321,7 +272,7 @@ nav a:hover {
    color: #fff;
    height: 30px;
    width: 30px;
-   font-size: 18px;
+   font-size: var(--small-fs);
    line-height: 30px;
    text-align: center;
 
@@ -592,12 +543,11 @@ footer {
 
 footer p {
    color: black;
-   font-size: 14px;
+   font-size: var(--very-small-fs);
    font-family: "opensans-regular", sans-serif;
 
 }
 
 footer p a {
    text-decoration: underline;
-   color: #ffffff;
 }

@@ -310,13 +310,14 @@ img {
     position: relative;
   }
 
-  h1 {
+  h1, h2 {
     text-align: center;
   }
 
   h2 {
-    text-align: center;
+     padding: 2rem 0;
   }
+
 
   .col-1 {
     display: none;
