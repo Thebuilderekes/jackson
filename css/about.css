@@ -48,12 +48,14 @@ body {
 
 a {
   text-decoration: none;
-  font-family: 'opensans-light';
+
 }
 
 button {
   background-color: transparent;
   border: none;
+  padding: 0;
+  margin: 0;
 }
 
 /*====================================*/
@@ -67,14 +69,28 @@ button {
 .nav-container {
   width: 100%;
   background: blueviolet;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   z-index: 10;
+}
+
+.nav-container .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.nav-container .logo a {
+  font-family: 'opensans-bold';
+  color: #ffffff;
+  font-weight: 900;
 }
 
 
@@ -98,6 +114,7 @@ header .nav-container .desktop-menu button {
 
 .desktop-menu {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -106,6 +123,21 @@ header .nav-container .desktop-menu button {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+}
+
+
+/*========Mobile media queries=================*/
+
+@media screen and (max-width: 700px) {
+
+  header .desktop-menu ul {
+    display: none;
+  }
+
+  header .nav-container .desktop-menu button {
+    display: block;
+  }
+
 }
 
 .desktop-menu ul li {
@@ -118,6 +150,14 @@ header .nav-container .desktop-menu button {
   color: #ffffff;
 }
 
+.desktop-menu ul li a:hover {
+  color: #000000;
+}
+
+
+/*====================================*/
+/*========Mobile menu styles================*/
+/*===================================*/
 
 .mobile__menu--container {
   background: blueviolet;
@@ -131,6 +171,8 @@ header .nav-container .desktop-menu button {
   transition: 1s ease;
 }
 
+/*========Mobile media queries=================*/
+
 @media screen and (min-width:900px) {
   .mobile__menu--container {
     display: none;
@@ -138,7 +180,6 @@ header .nav-container .desktop-menu button {
   }
 
 }
-
 
 .mobile__menu--container .mobile__menu {
   display: -webkit-box;
@@ -152,7 +193,9 @@ header .nav-container .desktop-menu button {
   padding-top: 20px;
 }
 
-@media screen and (max-width:500px) {
+/*========Mobile media queries=================*/
+
+@media screen and (max-width:700px) {
 
   .mobile__menu .mobile__menu--container {
     width: 60vw;
@@ -171,7 +214,7 @@ header .nav-container .desktop-menu button {
 .mobile__menu--container .mobile__menu ul li a {
   font-size: var(--normal-fs);
   font-weight: 900;
-  color: #000000;
+  color: #ffffff;
   padding: 20px 0;
 
 }
@@ -226,42 +269,7 @@ h1 {
 }
 
 
-
-.social .social-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 50px;
-  padding-top: 20px;
-}
-
-.social .social-links a {
-  padding: 0 10px;
-}
-
-footer {
-  background-color: #ba96db;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0;
-}
-
-footer p {
-  font-size: var(--very-small-fs);
-  font-family: "opensans-regular", sans-serif;
-}
-
-footer p a {
-  text-decoration: underline;
-  color: #ffffff;
-}
-
-/*==============================================================*/
-/*======================== MEDIA QUERIES ===================*/
-/*=============================================================*/
-
+/*========Mobile media queries=================*/
 @media screen and (max-width: 1920px) {
 
 
@@ -270,7 +278,6 @@ footer p a {
   }
 
 }
-
 
 @media screen and (max-width: 1200px) {
 
@@ -300,7 +307,18 @@ footer p a {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
+  .about-section {
+    flex-direction: column;
+  }
+
+  .about-section p {
+    font-size: var(--very-small-fs);
+
+  }
+}
+
+@media screen and (max-width: 700px) {
 
   header .desktop-menu ul {
     display: none;
@@ -316,16 +334,43 @@ footer p a {
   }
 }
 
-@media screen and (max-width: 480px) {
+/*========SOCIAL LINKS STYLES=================*/
 
+.social .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
 
+.social .social-links a {
+  padding: 0 10px;
+}
 
-  .about-section {
-    flex-direction: column;
-  }
+.social .social-links a i {
+  color: blueviolet;
+}
 
-  .about-section p {
-    font-size: var(--very-small-fs);
+/*====================================*/
+/*========Footer STYLES=================*/
+/*===================================*/
 
-  }
+footer {
+  background-color: #ba96db;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+footer p {
+  font-size: 12px;
+  font-family: "opensans-regular", sans-serif;
+}
+
+footer p a {
+  text-decoration: underline;
+  color: blueviolet
 }

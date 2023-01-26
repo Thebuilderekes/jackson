@@ -9,6 +9,14 @@
    --small-fs: 18px;
    --very-small-fs: 14px;
    --normal-fs: 16px;
+   --primary-color: "blueviolet";
+   --accent-color: "#b830ee";
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
 
 body {
@@ -44,7 +52,9 @@ i {
 }
 
 header .container-2 {
-   padding: 10px 10px 0 10px;
+   display: flex;
+   align-items: center;
+   padding: 10px 20px;
 }
 
 
@@ -187,17 +197,25 @@ header .container-2 {
 
 #portfolio {
    background: #ffffff;
-   padding-top: 10rem;
+   padding-top: 15rem;
    padding-bottom: 4rem;
 }
 
 #portfolio h1 {
-   font: var(--medium-fs) "Cinzel", serif;
+   font: var(--large-fs) "Cinzel", serif;
    text-transform: uppercase;
    letter-spacing: 1px;
    text-align: center;
    margin-bottom: 48px;
    color: #b830ee;
+}
+
+@media screen and (max-width: 700px) {
+
+   #portfolio h1 {
+      font: var(--medium-fs) "Cinzel", serif;
+
+   }
 }
 
 #portfolio h5 {
@@ -216,12 +234,15 @@ header .container-2 {
 #portfolio nav a {
    text-transform: uppercase;
    text-decoration: underline;
-   color: blueviolet;
+   color: #ffffff;
+   background-color: #000000;
    font-weight: 900;
+   padding: 10px 20px;
+   margin: 5%;
 }
 
-#portfolio h5 a:hover {
-   color: #000000;
+#portfolio nav a:hover {
+   color: #b830ee;
 }
 
 
@@ -542,9 +563,9 @@ footer {
 }
 
 footer p {
-   color: black;
-   font-size: var(--very-small-fs);
+   font-size: 12px;
    font-family: "opensans-regular", sans-serif;
+   color: black;
 
 }
 

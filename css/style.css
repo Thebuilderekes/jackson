@@ -259,6 +259,11 @@ img {
     text-align: center;
   }
 
+  button {
+    background-color: transparent;
+    border: none;
+  }
+
   .col-1 {
     display: none;
     z-index: 15;
@@ -310,12 +315,13 @@ img {
     position: relative;
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     text-align: center;
   }
 
   h2 {
-     padding: 2rem 0;
+    padding: 2rem 0;
   }
 
 

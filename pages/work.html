@@ -10,6 +10,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" href="/assets/fontawesome-free-5.15.4-web/css/all.css" />
       <link rel="stylesheet" href="/css/default.css"> <!---for vendor CSS-->
       <link rel="stylesheet" href="/css/about.css"> <!---for Navigation CSS-->
       <link rel="stylesheet" href="/css/work.css">
@@ -27,8 +28,11 @@
 
             <nav class="desktop-menu "> <!--Navigation -->
                <button onclick="openNav()" aria-pressed="false" id="hamburger__menu--btn">
-                  <img class="hamburger__menu--img" id="hamburger__menu--img" src="/assets/img/icons8-menu-30.png"
-                     alt="">
+                  <span style="font-size: 2.5rem;">
+                     <span style="color: white;">
+                        <i class="fas fa-bars"></i>
+                     </span>
+                  </span>
                </button>
                <ul>
                   <li><a href="/">Home</a></li>
@@ -49,7 +53,7 @@
                <li><a href="#contact">Contact</a></li>
             </ul>
             <button onclick="closeNav()" id="close__menu--btn">
-               <svg class="close__menu--img" fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+               <svg class="close__menu--img" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                   width="24px" height="24px">
                   <path
                      d="M 4.9902344 3.9902344 A 1.0001 1.0001 0 0 0 4.2929688 5.7070312 L 10.585938 12 L 4.2929688 18.292969 A 1.0001 1.0001 0 1 0 5.7070312 19.707031 L 12 13.414062 L 18.292969 19.707031 A 1.0001 1.0001 0 1 0 19.707031 18.292969 L 13.414062 12 L 19.707031 5.7070312 A 1.0001 1.0001 0 0 0 18.980469 3.9902344 A 1.0001 1.0001 0 0 0 18.292969 4.2929688 L 12 10.585938 L 5.7070312 4.2929688 A 1.0001 1.0001 0 0 0 4.9902344 3.9902344 z" />
@@ -61,16 +65,16 @@
       <section id="portfolio">
          <div class="row">
             <div class="twelve columns collapsed">
-               <h1>Check Out Some of My Works.</h1>
+               <h1>Some of My Works.</h1>
                <!-- PORTFOLIO WRAPPER-->
                <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
                   <div class="columns portfolio-item">
                      <div class="item-wrap">
-                        <a href="#modal-01" title="">
+                        <a href="#modal-01" title="Movie Set">
                            <img alt="" src="/assets/img/img-4.jpg">
                            <div class="overlay">
                               <div class="portfolio-item-meta">
-                                 <p>Illustrration</p>
+                                 <p>Movie set</p>
                               </div>
                            </div>
                            <div class="link-icon">
@@ -205,11 +209,11 @@
                   elit
                   consequat ipsum, nec sagittis sem nibh id elit.</p>
                <span class="categories">
-                  <i class="fa fa-tag"></i>Art, Fine art
+                  <i class="fa fa-tag"></i>Movie
                </span>
             </div>
             <div class="link-box">
-               <a href="#" target="_blank">Details</a>
+
                <a class="popup-modal-dismiss">Close</a>
             </div>
          </div><!-- modal-01 End -->
@@ -227,7 +231,7 @@
             </div>
 
             <div class="link-box">
-               <a href="#" target="_blank">Details</a>
+
                <a class="popup-modal-dismiss">Close</a>
             </div>
 
@@ -241,11 +245,11 @@
                   elit
                   consequat ipsum, nec sagittis sem nibh id elit.</p>
                <span class="categories">
-                  <i class="fa fa-tag"></i>Art
+                  <i class="fa fa-tag"></i>Movie
                </span>
             </div>
             <div class="link-box">
-               <a href="#" target="_blank">Details</a>
+
                <a class="popup-modal-dismiss">Close</a>
             </div>
          </div><!-- modal-03 End -->
@@ -262,7 +266,7 @@
                </span>
             </div>
             <div class="link-box">
-               <a href="#" target="_blank">Details</a>
+
                <a class="popup-modal-dismiss">Close</a>
             </div>
          </div><!-- modal-04 End -->
@@ -277,7 +281,7 @@
                </span>
             </div>
             <div class="link-box">
-               <a href="#" target="_blank">Details</a>
+
                <a class="popup-modal-dismiss">Close</a>
             </div>
          </div><!-- modal-05 End -->
@@ -293,7 +297,7 @@
                </span>
             </div>
             <div class="link-box">
-               <a href="#" target="_blank">Details</a>
+
                <a class="popup-modal-dismiss">Close</a>
             </div>
          </div><!-- modal-06 End -->
@@ -310,7 +314,7 @@
                </span>
             </div>
             <div class="link-box">
-               <a href="#" target="_blank">Details</a>
+
                <a class="popup-modal-dismiss">Close</a>
             </div>
          </div><!-- modal-07 End -->
@@ -324,7 +328,7 @@
                <span class="categories"><i class="fa fa-tag"></i>Fine art, Art</span>
             </div>
             <div class="link-box">
-               <a href="#" target="_blank">Details</a>
+
                <a class="popup-modal-dismiss">Close</a>
             </div>
          </div><!-- modal-08 End -->
@@ -333,7 +337,7 @@
       </section> <!-- Portfolio Section End-->
 
       <footer> <!--FOOTER-->
-         <p> Copyright 2022. Iprite Jackson All rights Reserved </p>
+         <p> Copyright 2022-2023. Iprite Jackson All rights Reserved </p>
          <p>Made by <a href="https://twitter.com/iamthebuilder__" target="_blank">Ekeopre</a></p>
       </footer>
       <!--SCRIPTS-->

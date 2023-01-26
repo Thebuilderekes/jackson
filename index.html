@@ -24,7 +24,7 @@
   <body>
     <header>
       <div class="col-1" id="col-1">
-        <a class="close-menu" id="close-menu" onclick="closeMenu()" href="#"><i class="fas fa-times"></i> </a>
+        <button class="close-menu" id="close-menu" onclick="closeMenu()" href="#"><i class="fas fa-times"></i> </button>
         <h1 class="animate__animated animate__fadeIn animate__delay-0.6s">Iprite Jackson </h1>
         <h2 class="animate__animated animate__fadeIn animate__delay-0.8s">Actor <span> |</span> Artist</h2>
         <div class="social-links tagline">
@@ -43,13 +43,14 @@
 
       <div class="col-2">
         <!--HAMBURGER MENU-->
-        <a class="open-menu" id="open-menu" onclick="openMenu()" href="#">
+        <button aria-pressed="false" id="hamburger__menu--btn" class="open-menu" id="open-menu" onclick="openMenu()"
+          href="#">
           <span style="font-size: 2.5rem;">
             <span style="color: white;">
               <i class="fas fa-bars animate__animated animate__heartBeat animate__infinite	"></i>
             </span>
           </span>
-        </a>
+        </button>
         <!--HAMBURGER MENU-->
         <img src="/assets/img/jackson-img.jpg" alt="jackson smiling" />
       </div>
