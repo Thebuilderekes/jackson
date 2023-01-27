@@ -8,6 +8,8 @@
   box-sizing: border-box;
 }
 
+
+
 :root {
   --extralarge-fs: 50px;
   --large-fs: 36px;
@@ -23,7 +25,7 @@
 html {
   height: 100%;
   width: 100%;
-
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -69,6 +71,8 @@ button {
 .nav-container {
   width: 100%;
   background: blueviolet;
+
+  overflow-x: hidden;
 
   display: -webkit-box;
   display: -ms-flexbox;
@@ -191,6 +195,11 @@ header .nav-container .desktop-menu button {
   -ms-flex-align: start;
   align-items: flex-start;
   padding-top: 20px;
+}
+
+.mobile__menu--container .mobile__menu ul li a {
+  font-family: 'opensans-light';
+
 }
 
 /*========Mobile media queries=================*/
@@ -372,5 +381,5 @@ footer p {
 
 footer p a {
   text-decoration: underline;
-  color: blueviolet
+  color: black;
 }
