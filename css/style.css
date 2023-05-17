@@ -1,13 +1,16 @@
-@import url("fonts.css");
-@import url("fontello/css/fontello.css");
-@import url("font-awesome/css/font-awesome.min.css");
-
-
+@import url('fonts.css');
+@import url('fontello/css/fontello.css');
+@import url('font-awesome/css/font-awesome.min.css');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+
+  outline: none !important;
 }
 
 :root {
@@ -29,17 +32,23 @@ html {
 body {
   background: hsla(197, 100%, 63%, 1);
 
-  background: linear-gradient(90deg,
-      hsla(197, 100%, 63%, 1) 0%,
-      hsla(294, 100%, 55%, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
 
-  background: -moz-linear-gradient(90deg,
-      hsla(197, 100%, 63%, 1) 0%,
-      hsla(294, 100%, 55%, 1) 100%);
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
 
-  background: -webkit-linear-gradient(90deg,
-      hsla(197, 100%, 63%, 1) 0%,
-      hsla(294, 100%, 55%, 1) 100%);
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
 
   filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#40C9FF", endColorstr="#E81CFF", GradientType=1);
   overflow-y: hidden;
@@ -72,14 +81,15 @@ header {
 
 h1 {
   font-size: var(--extarlarge-font-size);
-  font-family: "Cinzel", serif;
+  font-family: 'Cinzel', serif;
   margin: 0 auto;
+  text-align: center;
   color: rgb(0, 0, 0);
 }
 
 h2 {
   font-size: var(--medium-font-size);
-  font-family: "Cinzel", serif;
+  font-family: 'Cinzel', serif;
   color: #ffffff;
 }
 
@@ -90,14 +100,13 @@ h2 span {
 
 nav {
   margin-top: 50px;
-
 }
 
 nav a {
   display: block;
   text-align: center;
   text-decoration: none;
-  font-family: "opensans-regular", sans-serif;
+  font-family: 'opensans-regular', sans-serif;
   font-size: 24px;
   font-weight: 600;
   color: black;
@@ -116,20 +125,26 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 40%;
   background: hsla(197, 100%, 63%, 1);
 
-  background: linear-gradient(90deg,
-      hsla(197, 100%, 63%, 1) 0%,
-      hsla(294, 100%, 55%, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
 
-  background: -moz-linear-gradient(90deg,
-      hsla(197, 100%, 63%, 1) 0%,
-      hsla(294, 100%, 55%, 1) 100%);
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
 
-  background: -webkit-linear-gradient(90deg,
-      hsla(197, 100%, 63%, 1) 0%,
-      hsla(294, 100%, 55%, 1) 100%);
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
 
   filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#40C9FF", endColorstr="#E81CFF", GradientType=1);
 }
@@ -160,7 +175,7 @@ nav a:hover {
 }
 
 .col-2 {
-  width: 50%;
+  width: 60%;
   height: 100vh;
 }
 
@@ -172,11 +187,8 @@ nav a:hover {
 }
 
 img {
-  position: absolute;
-  right: 0;
+  width: 100%;
 }
-
-
 
 /*==============================================================*/
 /*======================== MEDIA QUERIES ===================*/
@@ -184,8 +196,10 @@ img {
 
 @media screen and (max-width: 1200px) {
   body {
-    background-image: linear-gradient(rgba(157, 30, 161, 0.308),
-        rgba(157, 30, 161, 0.308)),
+    background-image: linear-gradient(
+        rgba(157, 30, 161, 0.308),
+        rgba(157, 30, 161, 0.308)
+      ),
       url(/assets/img/jackson-img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -247,8 +261,10 @@ img {
 
 @media screen and (max-width: 768px) {
   body {
-    background-image: linear-gradient(rgba(157, 30, 161, 0.308),
-        rgba(157, 30, 161, 0.308)),
+    background-image: linear-gradient(
+        rgba(157, 30, 161, 0.308),
+        rgba(157, 30, 161, 0.308)
+      ),
       url(/assets/img/jackson-img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -311,8 +327,10 @@ img {
 
 @media screen and (max-width: 500px) {
   body {
-    background-image: linear-gradient(rgba(157, 30, 161, 0.308),
-        rgba(157, 30, 161, 0.308)),
+    background-image: linear-gradient(
+        rgba(157, 30, 161, 0.308),
+        rgba(157, 30, 161, 0.308)
+      ),
       url(/assets/img/jackson-img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -327,7 +345,6 @@ img {
   h2 {
     padding: 2rem 0;
   }
-
 
   .col-1 {
     display: none;
@@ -370,8 +387,10 @@ img {
 
 @media screen and (max-width: 400px) {
   body {
-    background-image: linear-gradient(rgba(157, 30, 161, 0.308),
-        rgba(157, 30, 161, 0.308)),
+    background-image: linear-gradient(
+        rgba(157, 30, 161, 0.308),
+        rgba(157, 30, 161, 0.308)
+      ),
       url(/assets/img/jackson-img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -425,3 +444,4 @@ img {
     justify-content: center;
   }
 }
+
